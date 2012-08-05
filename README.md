@@ -12,13 +12,13 @@ gem 'dojo-rails'
 
 Then run the `bundle` command to install the gem. Now, in your application.js file (for instance) you can require dojo. To require the dojo base distribution put:
 
-``` ruby
+``` javascript
 //= require dojo
 ```
 
 And for the full dojo version:
 
-``` ruby
+``` javascript
 //= require dojo/dojo
 ```
 
