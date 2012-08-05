@@ -28,3 +28,7 @@ That's it! You can now start make javascript code using the cool Dojo toolkit li
 
 I want to thanks the [jquery-rails](http://github.com/rails/jquery-rails) project. It helps me to release this project!
 I also want to thanks the [Ruby on Rails team](http://github.com/rails/) and its contributors. Thanks guys!
+
+## License
+
+This project is released under the MIT license. See the `LICENSE` file for more information.
