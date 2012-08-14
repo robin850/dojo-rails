@@ -22,7 +22,21 @@ And for the full dojo version:
 //= require dojo/dojo
 ```
 
-That's it! You can now start make javascript code using the cool Dojo toolkit library. 
+That's it! You can now start make javascript code using the cool Dojo toolkit library even in CoffeeScript files (extracted from the [dojo documentation](http://dojotoolkit.org/documentation/tutorials/1.7/hello_dojo)):
+
+```coffeescript
+require ["dojo/dom", "dojo/fx", "dojo/domReady!"], (dom, fx) ->
+  # The piece we had before...
+  greeting = dom.byId("greeting")
+  greeting.innerHTML += " from Dojo!"
+ 
+  # ...but now, with a fun animation!
+  fx.slideTo({
+    top: 100,
+    left: 200,
+    node: greeting
+  }).play()
+```
 
 ## Special thanks
 
