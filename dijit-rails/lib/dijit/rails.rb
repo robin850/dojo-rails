@@ -1,2 +1,2 @@
-require "rails/engine"
-require "rails/version"
+require "dijit/rails/engine"
+require "dijit/rails/version"
