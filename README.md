@@ -14,7 +14,7 @@ gem 'dojox-rails'
 gem 'dijit-rails'
 ```
 
-Then run the `bundle` command to install the(se) gem(s). Now, inside your javascript assets, you can use dojo, dijit or dojox. If you want more information on how to set-up and use one of these gems in your application, please see the README file in the root of the projects' directory. 
+Then run the `bundle` command to install the(se) gem(s). Now, inside your javascript assets, you can use dojo, dijit or dojox. If you want more information on how to set-up and use one of these gems in your application, please see [the wiki](https://github.com/robin850/dojo-rails/wiki). 
 
 Notice that `dojo-rails` provides both base and full distribution of the toolkit. If you just the want the base distribution, in your js file, add:
 
@@ -33,7 +33,7 @@ That's it! You can now start make javascript code using the cool Dojo toolkit li
 It may seem obvious but you can use dojo inside CoffeeScript files. Here two examples extracted (partially) from the [reference guide](http://dojotoolkit.org/reference-guide/1.8/) and converted into coffeescript:
 
 ```coffeescript
-//= require dojo
+#= require dojo
 require(["dojo/router", "dojo/dom", "dojo/fx", "dojo/domReady!"], (router, dom, fx) ->
   router.register("/articles/:id", (evt) ->
     alert "The article has the id " + evt[id]
@@ -53,11 +53,41 @@ require(["dojo/router", "dojo/dom", "dojo/fx", "dojo/domReady!"], (router, dom, 
 
 ### Troubleshooting
 
-One of the worst flaw of the use of dojo-rails and Coffeescript together is that sometimes, Dojo defines functions which are reserved keyword in Coffeescript such as `then` with `dojo/request` or the `dojo/on` module that you will certainly name `on`. Except rename modules, there is no real solution such as for the `then` function. If you have a solution, please let me know!  
+One of the worst flaw of the use of dojo-rails and Coffeescript together is that sometimes, Dojo defines functions which are reserved keyword in Coffeescript such as `then` with `dojo/request` or the `dojo/on` module that you will certainly name `on`. Except rename modules, there is no real solution such as for the `then` function. If you have a solution, please let me know!
 
 ## Special thanks
 
 I want to thanks the [jquery-rails](http://github.com/rails/jquery-rails) project ; it helps me to release theses three projects. I would also thanks the [Ruby on Rails team](http://github.com/rails/) and its contributors. Thanks guys!
+
+## Contribution
+
+### Code
+
+If you want to contribute to the code of the project to enhance a gem or the full suite, thanks ! You just have to :
+
+* Fork the project
+* Clone the repository on your local machine
+* Create a new branch with `git checkout -b new_feature`
+* Make changes and commit them
+* `git push origin master`
+* Open a new pull request
+
+It would be also nice if you could format your commits just like that:
+
+```
+* file.ext : a real awesome new feature !
+```
+And for several files :
+
+```
+My new feature
+* file1.ext : remove useless code
+* file2.ext : add poneys and rainbows !
+```
+
+### Bugs and issues
+
+If you found bug or if you have issues, please open a [new ticket](https://github.com/robin850/dojo-rails/issues/new) on the issue tracker.
 
 ## License
 
