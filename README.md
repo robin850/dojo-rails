@@ -1,22 +1,25 @@
 # Dojo with Ruby on Rails
 
-I haven't found a good implementation of the cool javascript Dojo toolkit library so I decided to release my own gem. This gem allows you to use the full dojo suite in your [Ruby on Rails](http://github.com/rails/rails) application. The project is divided into three gems dojo-rails, dijit-rails and dojox-rails.
+I haven't found a good implementation of the cool javascript Dojo toolkit library so I decided to release my own gem. This gem allows you to use the full dojo suite in your [Ruby on Rails](http://github.com/rails/rails) application. The project is divided into three gems dojo-rails, [dijit-rails](https://github.com/robin850/dijit-rails) and [dojox-rails](https://github.com/robin850/dojox-rails). 
 
-*Notice* : the project isn't very stable for the moment. You must be aware of that when using these gems. 
+This repository used to host each project's folder but there are now in their own repository. This one host dojo itself (the base and full version).
+
+**Notice** : these gems aren't very stable for the moment. You must be aware of that. 
 
 ## Installation and use
 
-To use these gems, you should edit the `Gemfile` of your application and add one of the following line:
+To use these gems, you should edit the `Gemfile` of your application and add the following line (commonly in your `:assets` group)
 
 ``` ruby
-gem 'dojo-rails'
-gem 'dojox-rails'
-gem 'dijit-rails'
+group :assets do
+  # ...
+  gem 'dojo-rails'
+end
 ```
 
-Then run the `bundle` command to install the(se) gem(s). Now, inside your javascript assets, you can use dojo, dijit or dojox. If you want more information on how to set-up and use one of these gems in your application, please see [the wiki](https://github.com/robin850/dojo-rails/wiki). 
+Then run the `bundle` command to install it. Now, inside your javascript assets, you can use dojo? If you want more information on how to set-up and use one of these gems in your application, please see [the wiki](https://github.com/robin850/dojo-rails/wiki).
 
-Notice that `dojo-rails` provides both base and full distribution of the toolkit. If you just the want the base distribution, in your js file, add:
+Notice that `dojo-rails` provides both the base and full distribution of the toolkit. If you just the want the base distribution, in your js file, add:
 
 ```javascript
 //= require dojo
@@ -28,9 +31,7 @@ And for the full version:
 //= require dojo/dojo
 ```
 
-That's it! You can now start make javascript code using the cool Dojo toolkit library even in CoffeeScript files (extracted from the [dojo documentation](http://dojotoolkit.org/documentation/tutorials/1.7/hello_dojo)):
-
-It may seem obvious but you can use dojo inside CoffeeScript files. Here two examples extracted (partially) from the [reference guide](http://dojotoolkit.org/reference-guide/1.8/) and converted into coffeescript:
+That's it! It may seem obvious but you can also use [CoffeeScript](http://coffeescript.org) in your files. Here an example [reference guide](http://dojotoolkit.org/reference-guide/1.8/):
 
 ```coffeescript
 #= require dojo
@@ -53,7 +54,7 @@ require(["dojo/router", "dojo/dom", "dojo/fx", "dojo/domReady!"], (router, dom, 
 
 ### Troubleshooting
 
-One of the worst flaw of the use of dojo-rails and Coffeescript together is that sometimes, Dojo defines functions which are reserved keyword in Coffeescript such as `then` with `dojo/request` or the `dojo/on` module that you will certainly name `on`. Except rename modules, there is no real solution such as for the `then` function. If you have a solution, please let me know!
+One of the worst problem when you use dojo-rails and Coffeescript together is that sometimes, Dojo defines functions which are reserved keyword in Coffeescript such as `then` with `dojo/request` or the `dojo/on` module that you will certainly name `on`. Except rename modules, there is no real solution such as for the `then` function. If you have a solution, **please let me know**!
 
 ## Special thanks
 
@@ -72,22 +73,9 @@ If you want to contribute to the code of the project to enhance a gem or the ful
 * `git push origin master`
 * Open a new pull request
 
-It would be also nice if you could format your commits just like that:
-
-```
-* file.ext : a real awesome new feature !
-```
-And for several files :
-
-```
-My new feature
-* file1.ext : remove useless code
-* file2.ext : add poneys and rainbows !
-```
-
 ### Bugs and issues
 
-If you found bug or if you have issues, please open a [new ticket](https://github.com/robin850/dojo-rails/issues/new) on the issue tracker.
+If you found bug or if you have issues, please open a [new ticket](https://github.com/robin850/dojo-rails/issues/new) on the issue tracker. Thank you a lot!
 
 ## License
 
