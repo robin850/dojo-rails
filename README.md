@@ -8,13 +8,10 @@ This repository used to host each project's folder but there are now in their ow
 
 ## Installation and use
 
-To use these gems, you should edit the `Gemfile` of your application and add the following line (commonly in your `:assets` group)
+To use these gems, you should edit the `Gemfile` of your application and add the following line:
 
 ``` ruby
-group :assets do
-  # ...
-  gem 'dojo-rails'
-end
+gem 'dojo-rails'
 ```
 
 Then run the `bundle` command to install it. Now, inside your javascript assets, you can use dojo? If you want more information on how to set-up and use one of these gems in your application, please see [the wiki](https://github.com/robin850/dojo-rails/wiki).
