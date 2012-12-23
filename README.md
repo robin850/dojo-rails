@@ -53,6 +53,24 @@ require(["dojo/router", "dojo/dom", "dojo/fx", "dojo/domReady!"], (router, dom, 
 
 One of the worst problem when you use dojo-rails and Coffeescript together is that sometimes, Dojo defines functions which are reserved keyword in Coffeescript such as `then` with `dojo/request` or the `dojo/on` module that you will certainly name `on`. Except rename modules, there is no real solution such as for the `then` function. If you have a solution, **please let me know**!
 
+## Usage with Asset Pipeline in Production
+
+To use with production and asset pipeline from Rails 3.1 you will need to have the [djConfig](http://dojotoolkit.org/documentation/tutorials/1.8/dojo_config/) hash set before you load the dojo/dojo library
+
+*This is critical for production mode because otherwise the require[ ] statements will not load libraries correctly*
+
+Example contents of application.js
+```coffeescript
+//= require dojo_config
+//= require dojo/dojo
+```
+Contents of dojo_config.js
+```javascript
+dojoConfig = {
+  baseUrl: '/assets/dojo/'
+};
+```
+
 ## Special thanks
 
 I want to thanks the [jquery-rails](http://github.com/rails/jquery-rails) project ; it helps me to release theses three projects. I would also thanks the [Ruby on Rails team](http://github.com/rails/) and its contributors. Thanks guys!
