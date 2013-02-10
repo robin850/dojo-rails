@@ -32,10 +32,10 @@ That's it! It may seem obvious but you can also use [CoffeeScript](http://coffee
 
 ```coffeescript
 #= require dojo
-require(["dojo/router", "dojo/dom", "dojo/fx", "dojo/domReady!"], (router, dom, fx) ->
-  router.register("/articles/:id", (evt) ->
+require ["dojo/router", "dojo/dom", "dojo/fx", "dojo/domReady!"], (router, dom, fx) ->
+  router.register "/articles/:id", (evt) ->
     alert "The article has the id " + evt[id]
-  )
+  
   router.startup()
 
   greeting = dom.byId("greeting")
@@ -46,7 +46,6 @@ require(["dojo/router", "dojo/dom", "dojo/fx", "dojo/domReady!"], (router, dom, 
     left: 200,
     node: greeting
   }).play()
-)
 ```
 
 ### Troubleshooting
