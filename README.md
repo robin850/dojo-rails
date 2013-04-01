@@ -1,6 +1,10 @@
 # Dojo with Ruby on Rails
 
-I haven't found a good implementation of the cool javascript Dojo toolkit library so I decided to release my own gem. This gem allows you to use the full dojo suite in your [Ruby on Rails](http://github.com/rails/rails) application. The project is divided into three gems dojo-rails, [dijit-rails](https://github.com/robin850/dijit-rails) and [dojox-rails](https://github.com/robin850/dojox-rails). 
+I haven't found a good implementation of the cool javascript Dojo toolkit library so I decided to release my own gem. This gem allows you to use the full dojo suite in your [Ruby on Rails](http://github.com/rails/rails) application. The project is divided into several gems : 
+
+* **dojo-rails**
+* [dijit-rails](https://github.com/robin850/dijit-rails)
+* [dojox-rails](https://github.com/robin850/dojox-rails). 
 
 This repository used to host each project's folder but there are now in their own repository. This one host dojo itself (the base and full version).
 
@@ -28,7 +32,7 @@ And for the full version:
 //= require dojo/dojo
 ```
 
-That's it! It may seem obvious but you can also use [CoffeeScript](http://coffeescript.org) in your files. Here an example [reference guide](http://dojotoolkit.org/reference-guide/1.8/):
+That's it! It may seem obvious but you can also use [CoffeeScript](http://coffeescript.org) in your files. Here an example of the [reference guide](http://dojotoolkit.org/reference-guide/1.8/):
 
 ```coffeescript
 #= require dojo
