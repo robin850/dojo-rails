@@ -8,8 +8,15 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{The dojotoolkit with Ruby on Rails 3}
   gem.homepage      = ""
 
-  gem.add_dependency "railties", ">= 3.2.0"
-  gem.add_dependency "thor",     "~> 0.14"
+  gem.add_dependency "rails", ">= 3.2.0"
+
+  gem.add_development_dependency('rake')
+  gem.add_development_dependency('rspec-rails')
+  gem.add_development_dependency('capybara')
+  gem.add_development_dependency('bundler')
+  gem.add_development_dependency('railties', "= 3.2.13")
+  gem.add_development_dependency('actionmailer', "= 3.2.13")
+  gem.add_development_dependency('sqlite3')
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
