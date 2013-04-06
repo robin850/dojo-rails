@@ -82,7 +82,7 @@ You just have to use the `dojo_config` helper passing a hash with options
 (just put this line before your `javascript_include_tag`):
 
 ```erb
-<%= dojo_config :async => true, parse_on_load => false %>
+<%= dojo_config :async => true, :parse_on_load => false %>
 ```
 
 See the official [tutorial on dojoConfig](http://dojotoolkit.org/documentation/tutorials/1.8/dojo_config/) for further information.
