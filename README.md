@@ -73,19 +73,11 @@ as for the `then` function. If you have a solution, **please let me know**!
 ## Usage with Asset Pipeline in Production
 
 To use with production and asset pipeline from Rails 3.1 you will need to have
-the [djConfig](http://dojotoolkit.org/documentation/tutorials/1.8/dojo_config/)
+the [dojoConfig](http://dojotoolkit.org/documentation/tutorials/1.8/dojo_config/)
 hash set before you load the dojo/dojo library
 
-*This is critical for production mode because otherwise the require[ ] statements will not load libraries correctly*
-
-You just have to use the `dojo_config` helper passing a hash with options
-(just put this line before your `javascript_include_tag`):
-
-```erb
-<%= dojo_config :async => true, :parse_on_load => false %>
-```
-
-See the official [tutorial on dojoConfig](http://dojotoolkit.org/documentation/tutorials/1.8/dojo_config/) for further information.
+Please see the [dedicated page on the wiki](wiki/Configuration-with-dojoConfig)
+for further information on this variable.
 
 ## Special thanks
 
@@ -119,7 +111,10 @@ tracker. Thank you a lot!
 
 ## License
 
-This project is released under the MIT license. Dojo Toolkit is available under either the terms of the modified BSD license or the Academic Free License version 2.1. Please [visit the official page](http://dojotoolkit.org/license) for further information.
+This project is released under the MIT license. Dojo Toolkit is available under
+either the terms of the modified BSD license or the Academic Free License
+version 2.1. Please [visit the official page](http://dojotoolkit.org/license)
+for further information.
 
 Copyright (c) 2012 Robin Dupret
 
