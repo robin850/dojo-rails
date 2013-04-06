@@ -76,7 +76,7 @@ To use with production and asset pipeline from Rails 3.1 you will need to have
 the [dojoConfig](http://dojotoolkit.org/documentation/tutorials/1.8/dojo_config/)
 hash set before you load the dojo/dojo library
 
-Please see the [dedicated page on the wiki](wiki/Configuration-with-dojoConfig)
+Please see the [dedicated page on the wiki](https://github.com/robin850/dojo-rails/wiki/Configuration-with-dojoConfig)
 for further information on this variable.
 
 ## Special thanks
