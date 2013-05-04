@@ -1,10 +1,10 @@
 # Dojo with Ruby on Rails
 
-I haven't found a good implementation of the cool javascript 
-[Dojo toolkit](http://dojotoolkit.org/) library for Ruby on Rails so I 
+I haven't found a good implementation of the cool javascript
+[Dojo toolkit](http://dojotoolkit.org/) library for Ruby on Rails so I
 decided to release my own. This gem allows you to use the full dojo suite
-in your [Ruby on Rails](http://rubyonrails.org) application. The project 
-is divided into several gems: 
+in your [Ruby on Rails](http://rubyonrails.org) application. The project
+is divided into several gems:
 
 * **dojo-rails**
 * [dijit-rails](https://github.com/robin850/dijit-rails)
@@ -13,7 +13,7 @@ is divided into several gems:
 This repository used to host each project's folder but there are now in their
 own repository. This one host dojo itself (the base and full version).
 
-**Notice** : these gems aren't very stable for the moment. You must be aware! 
+**Notice** : these gems aren't very stable for the moment. You must be aware!
 
 ## Installation and use
 
@@ -40,7 +40,7 @@ And for the full version:
 //= require dojo/dojo
 ```
 
-That's it! It may seem obvious but you can also use 
+That's it! It may seem obvious but you can also use
 [CoffeeScript](http://coffeescript.org) in your files. Here an example of the
 [reference guide](http://dojotoolkit.org/reference-guide/1.8/):
 
@@ -49,7 +49,7 @@ That's it! It may seem obvious but you can also use
 require ["dojo/router", "dojo/dom", "dojo/fx", "dojo/domReady!"], (router, dom, fx) ->
   router.register "/articles/:id", (evt) ->
     alert "The article has the id " + evt[id]
-  
+
   router.startup()
 
   greeting = dom.byId("greeting")
@@ -95,7 +95,7 @@ If you want to contribute to the code of the project to enhance a gem or the ful
 * Clone the repository on your local machine
 * Create a new branch with `git checkout -b new_feature`
 * Make changes and commit them
-* `git push origin master`
+* `git push origin new_feature`
 * Open a new pull request
 
 Since Rails seperates each kind of asset into seperate directories, the update
@@ -105,7 +105,7 @@ this process.
 
 ### Bugs and issues
 
-If you found bug or if you have issues, please open a 
+If you found bug or if you have issues, please open a
 [new ticket](https://github.com/robin850/dojo-rails/issues/new) on the issue
 tracker. Thank you a lot!
 
@@ -133,5 +133,5 @@ OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
 THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
