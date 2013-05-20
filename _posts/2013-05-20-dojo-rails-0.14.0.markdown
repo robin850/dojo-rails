@@ -5,7 +5,7 @@ date:   2013-05-20 17:47:47
 categories: releases
 ---
 
-Hey everybody, we announce the immediate release of 0.14.0. Here the resume of
+Hey everybody, we announce the immediate release of 0.14.0. Here's the resume of
 the changes which have been made:
 
 ### Dojo
