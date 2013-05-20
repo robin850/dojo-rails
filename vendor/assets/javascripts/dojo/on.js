@@ -1,5 +1,5 @@
 /*
-	Copyright (c) 2004-2011, The Dojo Foundation All Rights Reserved.
+	Copyright (c) 2004-2012, The Dojo Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
 	see: http://dojotoolkit.org/license for details
 */
@@ -14,7 +14,7 @@ _3.add("event-orientationchange",_3("touch")&&!_3("android"));
 _3.add("event-stopimmediatepropagation",window.Event&&!!window.Event.prototype&&!!window.Event.prototype.stopImmediatePropagation);
 }
 var on=function(_5,_6,_7,_8){
-if(_5.on&&typeof _6!="function"){
+if(typeof _5.on=="function"&&typeof _6!="function"&&!_5.nodeType){
 return _5.on(_6,_7);
 }
 return on.parse(_5,_6,_7,_9,_8,this);
@@ -159,9 +159,6 @@ return _41.apply(this,arguments);
 }
 if(_3("dom-addeventlistener")){
 _28={focusin:"focus",focusout:"blur"};
-if(_3("opera")){
-_28.keydown="keypress";
-}
 on.emit=function(_43,_44,_45){
 if(_43.dispatchEvent&&document.createEvent){
 var _46=_43.ownerDocument.createEvent("HTMLEvents");
@@ -302,8 +299,15 @@ delete _5b.type;
 catch(e){
 }
 if(_5b.type){
+if(_3("mozilla")){
+var _5c={};
+for(var _5e in _5b){
+_5c[_5e]=_5b[_5e];
+}
+}else{
 _58.prototype=_5b;
 var _5c=new _58;
+}
 _5c.preventDefault=function(){
 _5b.preventDefault();
 };
@@ -327,10 +331,10 @@ if(!("rotation" in _5c)){
 _5c.rotation=0;
 _5c.scale=1;
 }
-var _5e=_5c.changedTouches[0];
-for(var i in _5e){
+var _5f=_5c.changedTouches[0];
+for(var i in _5f){
 delete _5c[i];
-_5c[i]=_5e[i];
+_5c[i]=_5f[i];
 }
 }
 return _5a.call(this,_5c);

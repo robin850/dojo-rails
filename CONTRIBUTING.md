@@ -19,8 +19,9 @@ To submit a patch, you just have to:
 If you want to update the toolkit version keep this in mind please:
 
 * Never update to a new major version if there is no patch (e.g: 1.9.0)
-* Enhance your commit message with some notes about this version (e.g major
-incompatibilities or major new feature)
+* If it's a major release, enhance your commit message with some notes about this
+version (e.g major incompatibilities or major new feature)
+* Be sure to update Dojo::VERSION as well
 * Use bamboo (read further)
 
 Since Rails seperates each kind of asset into seperate directories, the update
