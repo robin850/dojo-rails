@@ -32,6 +32,9 @@ this helper. For instance:
   Thanks to [sjerman](https://github.com/sjerman), the main include statement
 in `lib/dojox-rails` has been corrected to fix [#1].
 
+To be up to date with this latest version, just go to your Gemfile and lock the
+version to 0.14.0. Then run `bundle update` and there you go!
+
 Thanks everyone for your contribution and for using Dojo!
 
 [#1]: https://github.com/robin850/dojox-rails/issues/1
