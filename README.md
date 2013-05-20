@@ -1,50 +1,50 @@
 # Dojo with Ruby on Rails
 
-I haven't found a good implementation of the cool javascript
-[Dojo toolkit](http://dojotoolkit.org/) library for Ruby on Rails so I
-decided to release my own. This gem allows you to use the full dojo suite
-in your [Ruby on Rails](http://rubyonrails.org) application. The project
+I haven't found a good implementation of the [Dojo toolkit][dojotoolkit] library
+for Ruby on Rails so I decided to release my own. This gem allows you to use the
+full dojo suite in your [Ruby on Rails][rails] application. The project
 is divided into several gems:
 
 * **dojo-rails**
-* [dijit-rails](https://github.com/robin850/dijit-rails)
-* [dojox-rails](https://github.com/robin850/dojox-rails)
+* [dijit-rails]
+* [dojox-rails]
 
-This repository used to host each project's folder but there are now in their
-own repository. This one host dojo itself (the base and full version).
+This repository used to host all three projects but they have now their own
+repository. This one host Dojo itself (the base and full version).
 
 **Notice** : these gems aren't very stable for the moment. You must be aware!
 
+If you found bug or if you have issues, please open a [new ticket] on the issue
+tracker.
+
 ## Installation and use
 
-To use these gems, you should edit the `Gemfile` of your application and add
-the following line:
+To use these gems, just edit your application's `Gemfile` and add the following:
 
-``` ruby
+~~~ruby
 gem 'dojo-rails'
-```
+~~~
 
 Then run the `bundle` command to install it. Now, inside your javascript assets,
 you can use dojo.
 
-Notice that `dojo-rails` provides both the base and full distribution of the
+Note that `dojo-rails` provides both the base and full distribution of the
 toolkit. If you just the want the base distribution, in your js file, add:
 
-```javascript
+~~~javascript
 //= require dojo
-```
+~~~
 
 And for the full version:
 
-```javascript
+~~~javascript
 //= require dojo/dojo
-```
+~~~
 
-That's it! It may seem obvious but you can also use
-[CoffeeScript](http://coffeescript.org) in your files. Here an example of the
-[reference guide](http://dojotoolkit.org/reference-guide/1.8/):
+That's it! It may seem obvious but you can also use [CoffeeScript][coffeescript]
+in your assets. Here an example of the [reference guide]:
 
-```coffeescript
+~~~coffeescript
 #= require dojo
 require ["dojo/router", "dojo/dom", "dojo/fx", "dojo/domReady!"], (router, dom, fx) ->
   router.register "/articles/:id", (evt) ->
@@ -60,54 +60,32 @@ require ["dojo/router", "dojo/dom", "dojo/fx", "dojo/domReady!"], (router, dom, 
     left: 200,
     node: greeting
   }).play()
-```
+~~~
 
 ### Troubleshooting
 
-One of the worst problem when you use dojo-rails and Coffeescript together is
-that sometimes, Dojo defines functions which are reserved keyword in
+One of the worst problem when you use dojo-rails and Coffeescript is that
+sometimes, Dojo defines functions which are reserved keyword in
 Coffeescript such as `then` with `dojo/request` or the `dojo/on` module that you
 will certainly name `on`. Except rename modules, there is no real solution such
-as for the `then` function. If you have a solution, **please let me know**!
+as for the `then` function. If you have a solution, please let me know!
 
 ## Usage with Asset Pipeline in Production
 
-To use with production and asset pipeline from Rails 3.1 you will need to have
-the [dojoConfig](http://dojotoolkit.org/documentation/tutorials/1.8/dojo_config/)
-hash set before you load the dojo/dojo library
-
-Please see the [dedicated page on the wiki](https://github.com/robin850/dojo-rails/wiki/Configuration-with-dojoConfig)
-for further information on this variable.
+To use Dojo in Production, you will need t configure assets path and maybe
+other options. Please see the [dedicated page on the wiki][wiki] for further
+information on this variable.
 
 ## Special thanks
 
-I want to thanks the [jquery-rails](http://github.com/rails/jquery-rails)
-project ; it helps me to release theses three projects. I would also thanks the
-[Ruby on Rails team](http://github.com/rails/) and its contributors. Thanks guys!
+I want to thanks the [jquery-rails] project ; it helps me to release theses
+projects. I would also love to thank the [Ruby on Rails team][rails] and all
+contributors!
 
 ## Contribution
 
-### Code
-
-If you want to contribute to the code of the project to enhance a gem or the full suite, thanks ! You just have to :
-
-* Fork the project
-* Clone the repository on your local machine
-* Create a new branch with `git checkout -b new_feature`
-* Make changes and commit them
-* `git push origin new_feature`
-* Open a new pull request
-
-Since Rails seperates each kind of asset into seperate directories, the update
-to a newer version can be pretty hard so I decided to write a little script
-which is call [Bamboo](https://gist.github.com/robin850/5325645) to simplify
-this process.
-
-### Bugs and issues
-
-If you found bug or if you have issues, please open a
-[new ticket](https://github.com/robin850/dojo-rails/issues/new) on the issue
-tracker. Thank you a lot!
+Please see the [contribution guideline](contributing.md) of the project if
+you want to contribute! Thanks :heart:!
 
 ## License
 
@@ -135,3 +113,12 @@ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+
+[dojotoolkit]: http://dojotoolkit.org/
+[rails]: http://rubyonrails.org/
+[dijit-rails]: https://github.com/robin850/dijit-rails
+[dojox-rails]: https://github.com/robin850/dojox-rails
+[coffeescript]: http://coffeescript.org
+[new ticket]: https://github.com/robin850/dojo-rails/issues/new
+[reference guide]: http://dojotoolkit.org/reference-guide/1.8/
+[wiki]: https://github.com/robin850/dojo-rails/wiki/Configuration-with-dojoConfig
