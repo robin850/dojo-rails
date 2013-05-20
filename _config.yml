@@ -1,0 +1,5 @@
+name: Dojo-rails
+pygments: true
+markdown: redcarpet
+redcarpet:
+  extensions: ["fenced_code_blocks", "no_intra_emphasis", "tables"]

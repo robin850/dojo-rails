@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "Dojo-rails version 0.14.0!"
+date:   2013-05-20 17:47:47
+categories: releases
+---
+
+Hey everybody, we announce the immediate release of 0.14.0. Here the resume of
+the changes which have been made:
+
+### Dojo
+
+* Update the toolkit to version 1.8.4
+* Add a `dojo_config` helper to simplify configuration:
+
+  You can override the value of the `dojoConfig` javascript variable thanks to
+this helper. For instance:
+
+  ~~~erb
+  <%= dojo_config :has => {:dojo_firebug => true} %>
+  ~~~
+
+### Dijit
+
+* Update the toolkit to 1.8.4 as well
+
+### Dojox
+
+* Also update the toolkit to 1.8.4
+* Fix an issue with assets loading :
+
+  Thanks to [sjerman](https://github.com/sjerman), the main include statement
+in `lib/dojox-rails` has been corrected to fix [#1].
+
+Thanks everyone for your contribution and for using Dojo!
+
+[#1]: https://github.com/robin850/dojox-rails/issues/1
