@@ -1,3 +1,4 @@
+base-url: "http://robin850.github.io/dojo-rails"
 name: Dojo-rails
 pygments: true
 markdown: redcarpet
