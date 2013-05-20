@@ -24,10 +24,16 @@ body > *:last-child {
   color: white;
 }
 
+#header a {
+  text-decoration: none!important;
+  cursor: pointer;
+}
+
 #header h4 {
   color: white;
   margin: 0;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 #container {
