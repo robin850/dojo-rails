@@ -42,7 +42,7 @@ And for the full version:
 ~~~
 
 That's it! It may seem obvious but you can also use [CoffeeScript][coffeescript]
-in your assets. Here an example of the [reference guide]:
+in your assets. Here's an example of the [reference guide]:
 
 ~~~coffeescript
 #= require dojo
