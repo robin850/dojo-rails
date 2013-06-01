@@ -84,8 +84,8 @@ contributors!
 
 ## Contribution
 
-Please see the [contribution guideline](contributing.md) of the project if
-you want to contribute! Thanks :heart:!
+Please see the [contribution guideline] of the project if you want to contribute!
+Thanks :heart:!
 
 ## License
 
@@ -122,3 +122,4 @@ DEALINGS IN THE SOFTWARE.
 [new ticket]: https://github.com/robin850/dojo-rails/issues/new
 [reference guide]: http://dojotoolkit.org/reference-guide/1.8/
 [wiki]: https://github.com/robin850/dojo-rails/wiki/Configuration-with-dojoConfig
+[contribution guideline]: https://github.com/robin850/dojo-rails/wiki/Contributing
