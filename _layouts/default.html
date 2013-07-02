@@ -9,25 +9,31 @@
     <!-- syntax highlighting CSS -->
     <link rel="stylesheet" href="{{ site.base-url }}/css/syntax.css">
 
-    <!-- Foundation CSS -->
+    <!-- Base CSS -->
     <link rel="stylesheet" href="{{ site.base-url }}/css/main.css" />
 
     </head>
 
     <body>
 
-      <div id="header">
-        <div class="row">
-          <a href="{{ site.base-url }}">
-            <h4>Dojo-rails <small>- Dojo toolkit with Ruby on Rails</small></h4>
-          </a>
+      <div class="header row">
+        <div class="brand">
+          <h4>Dojo-rails<br>
+          <small>Dojo toolkit with Ruby on Rails</small> <h4>
+        </div>
+
+        <div class="nav">
+          <a href="https://github.com/robin850/dojo-rails" class="github btn">GitHub repository</a>
+          <a href="https://github.com/robin850/dojo-rails/archive/master.zip" class="download btn">Download it</a>
         </div>
       </div>
 
-      <div id="container">
-        <div class="row">
-          {{ content }}
-        </div>
+      <div class="container row">
+        {{ content }}
+      </div>
+
+      <div class="footer row">
+        Copyright &copy; 2013 <a href="http://robin-dupret.com">Robin Dupret</a>
       </div>
 
     </body>
