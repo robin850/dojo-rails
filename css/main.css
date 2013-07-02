@@ -19,7 +19,7 @@ body {
 
 .header {
   height: 80px;
-  border-bottom: 1px solid #BFBFBF;
+  border-bottom: 1px solid #DFDFDF;
   margin: 40px auto;
 }
 
@@ -35,7 +35,7 @@ body {
   width: 300px;
 }
 
-.header .btn { margin-top: 1em; }
+.header .btn { margin-top: 1.5em; }
 
 .btn {
   border-radius: 3px;
@@ -62,6 +62,8 @@ body {
 }
 
 .footer {
+  margin-top: 40px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -71,19 +73,21 @@ pre * {
 }
 
 
-pre, code {
+div.highlight, code {
   background: #F8F8F8;
   border: 1px solid #DDD;
   overflow: hidden;
+  padding: 10px 15px;
 }
 
 pre {
-  padding: 10px 15px;
   overflow: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
 code { padding: 3px; }
+pre code { border: none; }
 
 a {
   color: #2E2E2E;
