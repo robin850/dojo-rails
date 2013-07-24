@@ -7,6 +7,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Create web applications using Dojo Toolkit (1.8) and Ruby on Rails 3}
   gem.summary       = %q{Dojo Toolkit with Ruby on Rails 3}
   gem.homepage      = "https://github.com/robin850/dojo-rails"
+  gem.license       = "MIT"
 
   gem.add_dependency "rails", ">= 3.1.12"
 
