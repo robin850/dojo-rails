@@ -1,5 +1,5 @@
 /*
-	Copyright (c) 2004-2012, The Dojo Foundation All Rights Reserved.
+	Copyright (c) 2004-2016, The JS Foundation All Rights Reserved.
 	Available via Academic Free License >= 2.1 OR the modified BSD license.
 	see: http://dojotoolkit.org/license for details
 */
@@ -43,7 +43,7 @@ return true;
 return _2(this.queryEngine(_10,_11)(this.data));
 },setData:function(_12){
 if(_12.items){
-this.idProperty=_12.identifier;
+this.idProperty=_12.identifier||this.idProperty;
 _12=this.data=_12.items;
 }else{
 this.data=_12;

@@ -1,8 +1,6 @@
-# Version 1.0.0 (unreleased)
+# Version 1.0.1 (2020-09-21)
 
-# Version 0.14.0 (2013-05-20)
-
-* Update the toolkit to 1.8.4!
+* Update the toolkit to 1.16.3!
 
 * Add a `dojo_config` helper to simplify configuration e.g.:
 
